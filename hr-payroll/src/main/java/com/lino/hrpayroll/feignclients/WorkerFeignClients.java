@@ -11,7 +11,7 @@ import com.lino.hrpayroll.model.entities.Worker;
 
 
 @Component//estou falando que é componente gerenciado pelo spring
-@FeignClient(name = "hr-worker",url = "localhost:8001",path ="/workers" )//vamos passar por enuanto o serviço que será consumido via hardcode
+@FeignClient(name = "hr-worker",path ="/workers" )//vamos passar por enuanto o serviço que será consumido via hardcode
 public interface WorkerFeignClients {
 
 	@GetMapping(value = "/{id}")

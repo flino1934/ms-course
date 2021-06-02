@@ -44,8 +44,14 @@ public class WorkerResources {
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id){
-		
-		logger.info("portaaa = "+environment.getProperty("local.server.port"));
+
+		/*try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		logger.info("porta = "+environment.getProperty("local.server.port"));
 		
 		Worker obj = repository.findById(id).get();//esta buscando todos e devolvendo o trabalhador conforme o id solicitado, como o findById devolve um optional ele faz essa requisição .get() 
 		return ResponseEntity.ok().body(obj);

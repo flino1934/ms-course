@@ -22,7 +22,7 @@ public class PaymentResources {
 	
 	}//estamos fazendo a injeção de dependencia através do construtor
 	
-	@HystrixCommand(fallbackMethod = "getPaymentAlternative")
+	@HystrixCommand(fallbackMethod = "getPaymentAlternative")//vai jogar para um metodo alternativo caso falhe 
 	@GetMapping(value = "/{workerId}/days/{days}")// id do worker(workerId) depois a palavra days e o parametro que tem o numero de dias
 	public ResponseEntity<Payment> getPayment(@PathVariable Long workerId, @PathVariable Integer days) {
 		Payment payment = service.getPayment(workerId, days);

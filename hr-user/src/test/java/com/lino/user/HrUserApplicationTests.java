@@ -1,10 +1,10 @@
-package com.lino.hrconfigserve;
+package com.lino.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HrConfigServeApplicationTests {
+class HrUserApplicationTests {
 
 	@Test
 	void contextLoads() {

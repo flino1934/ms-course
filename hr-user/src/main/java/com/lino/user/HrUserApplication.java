@@ -1,13 +1,13 @@
-package com.lino.hrconfigserve;
+package com.lino.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HrConfigServeApplication {
+public class HrUserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrConfigServeApplication.class, args);
+		SpringApplication.run(HrUserApplication.class, args);
 	}
 
 }
